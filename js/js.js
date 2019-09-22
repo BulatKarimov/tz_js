@@ -20,6 +20,7 @@ $(document).ready(function(){
             type: "POST",
             url: "http://localhost:3000/api/v1/solutions/solve",
             data: {"a": a, "b": b, "c": c, "type": "lin"},
+            headers: { 'Authorization': 'Bearer 27dd7eeb5fca7cdebab581d461ed1b6b'},
             success: function(data) {
                 alert("X = " + data.result);
             },
@@ -53,6 +54,7 @@ $(document).ready(function(){
             type: "POST",
             url: "http://localhost:3000/api/v1/solutions/solve",
             data: {"a": a, "b": b, "c": c, "d": d, "type": "sqrt"},
+            headers: { 'Authorization': 'Bearer 27dd7eeb5fca7cdebab581d461ed1b6b'},
             success: function(data) {
                 alert(data.result);
             },
